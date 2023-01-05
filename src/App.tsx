@@ -14,12 +14,28 @@ function App() {
       id: 'teste',
       title: "teste",
       isCompleted: true,
+    },
+    {
+      id: 'teste',
+      title: "teste",
+      isCompleted: false,
     }
   ]);
 
+  function addTask(taskTitle: string) {
+    setTasks([
+      ...tasks,
+      {
+        id: crypto.randomUUID(),
+        title: taskTitle,
+        isCompleted: false,
+      }
+    ]);
+  }
+
   return (
     <>
-      <Header />
+      <Header onAddTask={addTask} />
       <Tasks 
         tasks={tasks}
       />
