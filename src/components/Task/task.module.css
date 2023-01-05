@@ -17,22 +17,33 @@
     margin-right: auto;
 }
 
+p.textCompleted {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
 .checkContainer {
-    min-width: 1.125rem;
+    width: 1.125rem;
     height: 1.125rem;
     background: none;
     border: none;
-}
-
+  }
+  
 .checkContainer div {
     width: 100%;
     height: 100%;
+    border-radius: 999px;
     border: 2px solid var(--blue);
-    border-radius: 50%;
-}
+  }
 
-.buttonDelete {
+.checkContainer svg {
+    width: 100%;
+    height: 100%;
+    color: var(--purple);
+  }
+  
+.deleteButton {
     background: none;
     border: none;
     color: var(--gray-300);
-}
+  }
